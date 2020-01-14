@@ -1,0 +1,23 @@
+{
+  "name": "Cypress--Modern-Automation-Testing-from-Scratch-Framework",
+  "version": "1.0.0",
+  "description": "by Rahul Shetty",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AnkitKatheriya/Cypress--Modern-Automation-Testing-from-Scratch-Framework.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AnkitKatheriya/Cypress--Modern-Automation-Testing-from-Scratch-Framework/issues"
+  },
+  "homepage": "https://github.com/AnkitKatheriya/Cypress--Modern-Automation-Testing-from-Scratch-Framework#readme",
+  "dependencies": {
+    "cypress": "^3.8.1"
+  }
+}
