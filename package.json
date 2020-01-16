@@ -1,17 +1,25 @@
 {
   "name": "Cypress--Modern-Automation-Testing-from-Scratch-Framework",
   "version": "1.0.0",
-  "description": "by Rahul Shetty",
+  "description": "by Ankit Katheriya",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "scripts": {    
+    "test": "./node_modules/.bin/cypress run",
+    "headTest": "npm run test -- --headed",
+    "headlessTest": "./node_modules/.bin/cypress run --headless",
+    "chromeTest": "npm run test -- --browser chrome --parallel",
+    "testReport": "cypress run --reporter mochawesome",
+    "testDev": "./node_modules/.bin/cypress run --spec cypress/integration/FrameworkPart1.js --env url=https://rahulshettyacademy.com --headed",
+    "recordDashboardTest": "./node_modules/.bin/cypress run --record --key 70aa0f2a-6a7d-4b18-bce3-83d9ee54623f",
+    "configTest": "npm run test -- --config pageLoadTimeout=100000,watchForFileChanges=false",
+    "MultipleTestCasesFolderTest": "npm run test -- --spec \"cypress/integration/MultipleTestCases/*\""
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/AnkitKatheriya/Cypress--Modern-Automation-Testing-from-Scratch-Framework.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Ankit",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/AnkitKatheriya/Cypress--Modern-Automation-Testing-from-Scratch-Framework/issues"
@@ -19,5 +27,9 @@
   "homepage": "https://github.com/AnkitKatheriya/Cypress--Modern-Automation-Testing-from-Scratch-Framework#readme",
   "dependencies": {
     "cypress": "^3.8.1"
+  },
+  "devDependencies": {
+    "mocha": "^5.2.0",
+    "mochawesome": "^4.1.0"
   }
 }

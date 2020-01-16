@@ -76,7 +76,7 @@ run command : npm init -y
         { chromeWebSecurity:false} // It is a chrome bug
 
 
-Notes: 
+## Notes: 
 1)  By default ./node_modules/.bin/cypress run commands executes all test cases inside cypress/integration folder.
     If you wants to run testcases only specific to a test file then we would require to run below command.
 
@@ -103,7 +103,38 @@ Notes:
 
 10) Cypress auto accepts alerts and pop ups.
 
-11) Cypress also have a capability to listen browser events.
+11) Cypress have a capability to listen browser events, window:alert is the event which get fired on alert open. So you are firing that event through cypress to get the access of alert window.
+
+12) Cypress have capability to manipulate the DOM unlike any other automation framework.
+
+13) Cypress doesnot support child tab navigation, it probalily runs non flicky test - means on a sigle browser and in a single tab(no new tab). So to achieve the testing of this behaviour we would require to use jQuery method removeAttr - The whole idea bhind this is to remove target attribute from the DOM the try to open the link on the same tab, so that cypress can handle this. To run the removeAttr function we will invoke method which run the function passes to it.
+
+14) You can traverse to sibling with next() and it works only on get.
+
+15) Mouse hover events are not supported in Cypress. Alternatively use jQuery or force click.
+
+16) Cypress do not supports cross domain urls, there is not alternate way available.
+
+17) Cypress do not supports Frames, but its alternate way is available.
+
+18) All the fixtures should be call in the before test hook - it is recomended
+
+## Best practices in building Cypress Framework
+1) Setting up hooks
+2) Data driven testing with fixtures
+3) Building Custom Cypress commands
+4) Parameterize test with multiple Data sets
+5) Understand the test Debugging
+6) Build Page Object Design Pattern for objects
+7) Configuration changes in Cypress.json
+8) Understand the Environmental variables of Cypress
+9) Screeshots and Vide recording fot Test
+10) Exploring Cypress Dashboard
+11) Generating Excellent reports for Test execution results
+12) Inategrate Cypress tests with Jenkins CI
+
+
+
 
 
 
